@@ -30,7 +30,7 @@
             <tbody>
             {% for task in tasks %}
                 <tr>
-                    <td><a href="{% url 'task_detail' task.id %}">{{ task.title }}</a></td>
+                    <td><a href="{% url 'task_edit' task.id %}">{{ task.title }}</a></td>
                     <td>{{ task.get_status_display }}</td>
                     <td>{{ task.assigned_to.username }}</td>
                     <td>
