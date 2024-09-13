@@ -3,13 +3,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <style>
+        #id_password,#id_username{
+            width: 20vw;
+            border:none;
+            height: 25px;
+            border-radius: 10px;
+            margin-left: 5px;
+            padding: 5px;
+        }
+        .form_login{
+            display:flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .form_criar{
+            display:flex;
+            align-items: center;
+            gap: 3px;
+            justify-content: center;
+        }
+        .form_criar > p{
+            display:flex;
+            flex-direction: column;
+        }
+         .form_criar > p > textarea{
+             height: 70px;
+             resize: none;
+         }
+         .form_botao{
+             display:flex;
+             width: 30vw;
+             justify-content: center;
+              align-items: center;
+             flex-direction:row ;
+             gap: 8px;
+
+         }
+
+    </style>
     <meta charset="UTF-8">
     <title>Sistema de Gerenciamento de Tarefas</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: powderblue">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: cadetblue; color:black" >
     <a class="navbar-brand" href="{% url 'task_list' %}">Tarefas</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">

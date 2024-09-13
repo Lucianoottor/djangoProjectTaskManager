@@ -3,13 +3,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container mt-4">
-        <h2>Login</h2>
-        <form method="POST">
+    <div style="display:flex;align-items: center;justify-content: center;flex-direction: column;margin-top: 7rem;">
+        <h2 style="margin-bottom: 30px">Login</h2>
+        <form method="POST" style="display:flex;align-items: center;justify-content: center;flex-direction: column;gap:8px" class="form_login">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn" style="background-color: darkcyan; color: white" >Login</button>
         </form>
         <p class="mt-2">Não tem uma conta? <a href="{% url 'register' %}">Registre-se</a></p>
+
     </div>
 {% endblock %}
